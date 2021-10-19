@@ -1,0 +1,18 @@
+tasks:
+  - init: |
+      sudo apt update
+      sudo apt install -y swig python-dev lib32z1 flex
+      git submodule init && git submodule update
+      wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf.tar.xz
+      sudo tar -vxf gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf.tar.xz -C /opt
+      rm -f gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf.tar.xz
+      /opt/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-gcc --version
+      export PATH=$PATH:/opt/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf/bin
+
+# make CROSS_COMPILE=arm-none-linux-gnueabihf- Bananapi_M2_Ultra_defconfig bananapi_m2_berry_defconfig
+
+vscode:
+  extensions:
+    - coenraads.bracket-pair-colorizer
+    - ms-vscode.cpptools
+    - huizhou.githd
