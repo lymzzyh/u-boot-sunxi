@@ -10,9 +10,6 @@ tasks:
       export PATH=$PATH:/opt/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf/bin
 
 # make CROSS_COMPILE=arm-none-linux-gnueabihf- Bananapi_M2_Ultra_defconfig bananapi_m2_berry_defconfig
-
 vscode:
   extensions:
     - coenraads.bracket-pair-colorizer
-    - ms-vscode.cpptools
-    - huizhou.githd
