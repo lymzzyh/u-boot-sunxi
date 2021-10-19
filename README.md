@@ -1,0 +1,1 @@
+workspace as git://git.denx.de/u-boot.git
